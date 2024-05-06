@@ -8,7 +8,7 @@ Link : [https://www.kaggle.com/competitions/w2024-kaggle-contest/overview](https
 W2024 Kaggle Contest - Feb 2nd 2024 ~ Mar 29th 2024
 
 ### Description
-
+___
 In this kaggle contest, we will use a dataset to predict answers to the question "How important is religion in your life?". There are five possible responses for this question, which are: "no answer, very important, quite important, not important, not at all important".
 
 
@@ -97,8 +97,80 @@ ___
 
 Our dataset comprises 48,000 training and 11,438 test observations, each reflecting a survey response on the significance of religion in an individual's life across various European countries.
 
+#### Data cleaning
+* Columns with NA values → Imputation with ‘-3’
+
+* Dropped country specific columns (*_GB, *_DE)
+
+* Dropped non-numerical variables after confirming the relation with numerical type variables
+
+#### Merge Column
+
+* Merged “Modified” questionnaire columns with their original questionnaire columns. (ex: variables end of *_11c)
+
+* Sum of v133_11c which is not -4 => 26+222+184+...+440 = 2985
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/080c773c-df6a-4ef6-9378-8dc299b814c3)
+
+#### Aggregation
+
+* Some variables have extensive unique values (ex: v252_cs : 525 unique) => High Cardinality
+
+* Used simple aggregation method to merge categories
+
+* Aggregated until the sum of frequency is above 90%
+
+#### Time Variable Adjusted
+
+* Dropped irrelevant time data (ex: fw_start, fw_end, v278a, ...)
+
+* Created new columns to compensate such dropped columns (ex:fw_duration, fw_start_month)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/f098384d-4106-4f12-bf60-f6de8a8e2fdb)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/edf09aa5-6d52-4d20-9dd7-385028f4d560)
 
 
+#### Checking high correlation
+
+* Dropped Variables with correlation value over 0.95 to lower overfitting
+
+* Dropped features:
+  'v275c_N1', 'v20a', 'v30b', 'v45b', 'v96a', 'v136_11c', 'v135_11c', 'v141_11c', 'v176_DK', 'v177_DK', 'v181_DK', 'v179_DK', 'v180_DK', 'v182_DK', 'v183_DK', 'v222_DK', 'v223_DK', 'v224_DK',      'age_r', 'age_r3'
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/ef884fc9-1624-4046-9454-0b964afdb482)
+
+#### Checking barplots for response variable vs each of explanatory variables
+
+* Dropped features with unbalanced CI
+  * Top one is bad, but bottom one is good
+
+* Dropped features: 'v24a_IT', 'v52', 'v54', 'v64', 'f96', 'v102', 'v129', 'v172', 'v184', 'v171', 'v215', 'v174_LR'
+
+* Found this method causing more overfitting issues. (Mlog_loss was not improved.)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/03231e08-01bc-4c8b-944f-c750f4e8e8ed)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/9f8dd9ec-6ba2-4539-8582-ab9ac9d0cf76)
+
+#### One Hot Encoding
+
+* Removed related Numerical type of variables and performed one hot encoding to String (str4) type of variables (ex: v228b, v231b, v233b, 251b, ...)
+* Used get_dummies from Pandas
+* Example variable: v228b (respondents country of birth)
+  
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/45945086-365f-4969-bbf5-f9abbd57060d)
+
+#### Final EDA version used
+* Columns with NA values → Imputation with ‘-3’
+* Dropped country specific columns (*_GB, *_DE)
+* Merge Columns
+* Time related conversion
+* Dropped Variables with correlation value over 0.95 to lower overfitting
+  
+Total # of columns: 318![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/52ba6383-2a8f-47a8-887b-2bc7dfb879c5)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/e3c00728-4cb7-417c-a909-c4b4278f3cfe)
 
 
 
