@@ -18,7 +18,7 @@ Each observation represents a survey response of one person in different Europea
 A more detailed description for each column could be found in the given file "codebook.txt".
 
 ### Evaluation
-
+___
 The evaluation metric for this competition is Multiclass Logarithmic Loss, which is the negative log likelihood divided by the number of observations. Lower is better.
 
 
@@ -37,7 +37,7 @@ p_{ij} is the probability predicted by the model that sample i belongs to class 
 
 
 ### Submission Format
-
+___
 Submission files should contain six columns: id, no answer, very important, quite important, not important, not at all important, where id column should contain the index id for the test data. Rest columns should represent the probabilities of being classified to the corresponding category. Your submission should have a header.
 
 Submission Format example
@@ -52,7 +52,7 @@ id,no answer,very important,quite important,not important,not at all important
 ```
 
 ### Dataset Description
-
+___
 In this kaggle contest, we will use a dataset of survey results to predict "how is religion important in one's life". There are five possible responses for this question, which are: {'no answer':-1, 'very important':1, 'quite important':2, 'not important':3, 'not at all important':4}.
 
 
@@ -76,7 +76,7 @@ codebook.txt - (IMPORTANT) detailed descriptions of each column
 
 
 ### Software and Packages
-
+___
 #### Data Preprocessing
 
 Language: Python, R
@@ -92,7 +92,7 @@ Model name: Xgboost, Neural Network, LightGBM, SVM, Random Forest
 Packages: Numpy, Pandas, Scikit Learn, Xgboost, Pytorch, lightgbm, Bayesian Optimization
 
 ### Exploratory Data Analysis
-
+___
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/5eb599b7-83f9-41fc-8fcb-3956be4b7825)
 
 Our dataset comprises 48,000 training and 11,438 test observations, each reflecting a survey response on the significance of religion in an individual's life across various European countries.
