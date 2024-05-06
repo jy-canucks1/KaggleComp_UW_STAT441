@@ -168,7 +168,7 @@ Our dataset comprises 48,000 training and 11,438 test observations, each reflect
 * Time related conversion
 * Dropped Variables with correlation value over 0.95 to lower overfitting
   
-Total # of columns: 318![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/52ba6383-2a8f-47a8-887b-2bc7dfb879c5)
+Total # of columns: 318
 
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/e3c00728-4cb7-417c-a909-c4b4278f3cfe)
 
