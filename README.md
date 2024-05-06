@@ -75,3 +75,32 @@ sample_submission.csv - a sample submission file in the correct format
 codebook.txt - (IMPORTANT) detailed descriptions of each column
 
 
+### Software and Packages
+
+#### Data Preprocessing
+
+Language: Python, R
+
+Packages: Pandas, Numpy (Python), Basic packages for previous STAT 441 assignments(R) 
+
+#### Model
+
+Language: Python
+
+Model name: Xgboost, Neural Network, LightGBM, SVM, Random Forest
+
+Packages: Numpy, Pandas, Scikit Learn, Xgboost, Pytorch, lightgbm, Bayesian Optimization
+
+### Exploratory Data Analysis
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/5eb599b7-83f9-41fc-8fcb-3956be4b7825)
+
+Our dataset comprises 48,000 training and 11,438 test observations, each reflecting a survey response on the significance of religion in an individual's life across various European countries.
+
+
+
+
+
+
+
+
