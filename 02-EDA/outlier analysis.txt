@@ -1,0 +1,95 @@
+abs trash
+
+** too large CI 
+* large CI
+
+v2
+v3
+v8
+f20
+v24a_IT **
+v24b_IT *
+v25
+v27
+v28
+v29
+v30
+v30a
+v30c
+f45a
+v52 **
+v45c
+v52_cs *
+v54 **
+v64 **
+f96 **
+v102 **
+v103 *
+v106 *
+v129 **
+v133_11c *
+v139_11c
+v140_11c 
+v174_LR ** 
+v174_cs *
+v208
+
+v215 ** / 
+v172 **
+v184 ** /
+
+v171
+
+
+trash
+v4
+v7
+
+v20b
+v22
+v23
+v24
+v26
+f30a
+v109
+f110
+v111
+
+v134_11c
+v169
+v171
+v172
+v175_cs
+
+v178_DK
+
+
+under consideration
+v1
+v9
+v10
+v11
+v12
+v13
+v14
+v15
+v16
+v17
+v18
+v19
+v20
+v21
+f24_IT
+v32
+v33
+v34
+v45a
+v46
+v48
+v49
+v65
+v66
+v67
+v68
+v73
+v81
