@@ -22,7 +22,8 @@ A more detailed description for each column could be found in the given file "co
 The evaluation metric for this competition is Multiclass Logarithmic Loss, which is the negative log likelihood divided by the number of observations. Lower is better.
 
 
-MulticlassLogarithmicLoss=−1N∑i=1N∑j=1Myijlog(pij)
+![K-089](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/1bf6da96-c6e1-4aaf-a10f-39831085c373)
+
 where:
 
 
