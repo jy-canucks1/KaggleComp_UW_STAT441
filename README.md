@@ -143,15 +143,13 @@ Our dataset comprises 48,000 training and 11,438 test observations, each reflect
 #### Checking barplots for response variable vs each of explanatory variables
 
 * Dropped features with unbalanced CI
-  * Top one is bad, but bottom one is good
+  * Left one is bad, but Right one is good
 
 * Dropped features: 'v24a_IT', 'v52', 'v54', 'v64', 'f96', 'v102', 'v129', 'v172', 'v184', 'v171', 'v215', 'v174_LR'
 
 * Found this method causing more overfitting issues. (Mlog_loss was not improved.)
 
-![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/03231e08-01bc-4c8b-944f-c750f4e8e8ed)
-
-![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/9f8dd9ec-6ba2-4539-8582-ab9ac9d0cf76)
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/03231e08-01bc-4c8b-944f-c750f4e8e8ed) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/9f8dd9ec-6ba2-4539-8582-ab9ac9d0cf76)
 
 #### One Hot Encoding
 
