@@ -171,6 +171,27 @@ Total # of columns: 318
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/e3c00728-4cb7-417c-a909-c4b4278f3cfe)
 
 
+#### Model Building
+* Model
+  * Neural Network
+  * LightGBM
+  * RandomForest
+  * SVM
+  * XGBoost
+* Hyperparameter tuning
+  * GridSearchCV
+  * Bayesian Optimization
 
+#### Model Selection
+* Model for testing
+  * 3 Hidden layers with sigmoid activation function
+  * LogSoftmax was applied in output layer
+  * Trained with SGD
+  * Loss function : CrossEntropyLoss (not mlog_loss)
+  * Unstable learning curve with training set => bad model
+Kaggle Public Score: 1.42958
+Kaggle Private Score: 1.42854
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/178e9f3f-382a-4db9-8f5c-df480ee765b6)
 
 
