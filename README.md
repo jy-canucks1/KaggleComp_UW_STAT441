@@ -222,9 +222,8 @@ Kaggle Private Score: 0.86544
     * High Reliance on v63, v64, v54, v56
     * RandomizedSearchCV
         * Test Multiclass Logarithmic Loss: 0.9295549658942347
-        * 
-![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/cd682ea8-031f-4587-945b-6dd206d96b79) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/00f4a9de-a171-4916-8a9b-ecb7bc096a83)
-
+          
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/cd682ea8-031f-4587-945b-6dd206d96b79) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/00f4a9de-a171-4916-8a9b-ecb7bc096a83) 
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/0a8f5fa6-4858-4b1e-b346-d2e0702af63d)
 
 * XGBoost
@@ -233,8 +232,7 @@ Kaggle Private Score: 0.86544
   * Validation drops much slower after 10 iterations
   * Potential possibility of overfitting
 
-![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/1b9d7745-4d74-4621-b962-c1fc31f5a1c4)
-![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/546aa24c-5492-474e-b8d8-436a437db2d5)
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/1b9d7745-4d74-4621-b962-c1fc31f5a1c4) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/546aa24c-5492-474e-b8d8-436a437db2d5)
 
 
 ### Final Model
@@ -252,7 +250,14 @@ ___
 * Feature Importance
   
   ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/dd53c667-9f04-4fcb-aa80-d0bdddf50719)
-  v5: how important in your life: politics, v63: how important is God in your life, v115: how much confidence in: church, v54: how often attend religious services
+
+  v5: how important in your life: politics
+
+  v63: how important is God in your life
+
+  v115: how much confidence in: church
+
+  v54: how often attend religious services
 
 ### Possible Further Improvements
 
