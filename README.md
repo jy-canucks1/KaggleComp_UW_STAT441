@@ -269,7 +269,7 @@ ___
   v54: how often attend religious services
 
 ### Possible Further Improvements
-
+___
 * Stacking
   * Decision to focus individual model like XGBoost, and Random Forest was aiming for depth of optimization over breadth of techniques.
   * It can be considered to enhance model performance.
