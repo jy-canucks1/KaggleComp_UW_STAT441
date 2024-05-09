@@ -171,7 +171,8 @@ Total # of columns: 318
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/e3c00728-4cb7-417c-a909-c4b4278f3cfe)
 
 
-#### Model Building
+### Model Building
+___
 * Model
   * Neural Network
   * LightGBM
@@ -182,16 +183,81 @@ Total # of columns: 318
   * GridSearchCV
   * Bayesian Optimization
 
-#### Model Selection
-* Model for testing
+### Model Selection
+___
+* Neural Network
+  * Normalized all numerical variables 
   * 3 Hidden layers with sigmoid activation function
   * LogSoftmax was applied in output layer
   * Trained with SGD
   * Loss function : CrossEntropyLoss (not mlog_loss)
   * Unstable learning curve with training set => bad model
+  * It seems not suitable for the given dataset 
 Kaggle Public Score: 1.42958
 Kaggle Private Score: 1.42854
 
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/178e9f3f-382a-4db9-8f5c-df480ee765b6)
+
+* LightGBM
+  * Process:
+  * Use LightGBM package
+  * Set initial default parameter and loop through to find the best parameter
+  * Extremely slow runtime when optimizing the mode parameter
+  * Multiclass Logarithmic Loss:
+  * Training’s multi_logloss: 0.62381 
+  * Validation multi_logloss: 0.85574
+Kaggle Public Score: 0.87592
+Kaggle Private Score: 0.86544
+
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/d66fefda-ffb6-4ce8-9f5e-71cae34c4d80) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/0c37e29f-7dc9-4859-800a-cf1796063d3c)
+
+* SVM 
+  * Used Default Parameters to run the SVM
+  * Extremely slow runtime when training the model
+      
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/636a7bc1-5764-451c-890f-a59af08dcd84)
+
+* Random Forest
+  * Feature Importance
+    * High Reliance on v63, v64, v54, v56
+    * RandomizedSearchCV
+        * Test Multiclass Logarithmic Loss: 0.9295549658942347
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/cd682ea8-031f-4587-945b-6dd206d96b79) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/00f4a9de-a171-4916-8a9b-ecb7bc096a83)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/0a8f5fa6-4858-4b1e-b346-d2e0702af63d)
+
+* XGBoost
+  * Using ‘xgboost’ library from python
+  * Initial Model with default parameters
+  * Validation drops much slower after 10 iterations
+  * Potential possibility of overfitting
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/1b9d7745-4d74-4621-b962-c1fc31f5a1c4)
+
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/546aa24c-5492-474e-b8d8-436a437db2d5)
+
+
+### Final Model
+___
+![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/4fe6f19d-84c3-48e0-b31a-523b980e1b40)
+
+* Performed Bayesian Optimization for parameter tuning (Link: [https://github.com/bayesian-optimization/BayesianOptimization/](https://github.com/bayesian-optimization/BayesianOptimization/))
+
+* Implemented stratified k-fold cv with k = 5 to prevent overfitting for the tuning
+* Total 40 fits 
+* Best Parameter used is below:
+  ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/6d464117-096b-487f-89fc-5bff13202a7e)
+  
+* Feature Importance
+  ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/dd53c667-9f04-4fcb-aa80-d0bdddf50719)
+  v5: how important in your life: politics, v63: how important is God in your life, v115: how much confidence in: church, v54: how often attend religious services
+
+### Possible Further Improvements
+
+* Stacking
+  * Decision to focus individual model like XGBoost, and Random Forest was aiming for depth of optimization over breadth of techniques.
+  * It can be considered to enhance model performance.
+* One Hot Encoding
+  * Applying one hot encoding to selected string variable (after more deeper analysis) might be beneficial for future models.
 
 
