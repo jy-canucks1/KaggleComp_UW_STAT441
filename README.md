@@ -136,6 +136,7 @@ Our dataset comprises 48,000 training and 11,438 test observations, each reflect
 * Dropped Variables with correlation value over 0.95 to lower overfitting
 
 * Dropped features:
+  
   'v275c_N1', 'v20a', 'v30b', 'v45b', 'v96a', 'v136_11c', 'v135_11c', 'v141_11c', 'v176_DK', 'v177_DK', 'v181_DK', 'v179_DK', 'v180_DK', 'v182_DK', 'v183_DK', 'v222_DK', 'v223_DK', 'v224_DK',      'age_r', 'age_r3'
 
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/ef884fc9-1624-4046-9454-0b964afdb482)
@@ -192,8 +193,10 @@ ___
   * Trained with SGD
   * Loss function : CrossEntropyLoss (not mlog_loss)
   * Unstable learning curve with training set => bad model
-  * It seems not suitable for the given dataset 
+  * It seems not suitable for the given dataset
+    
 Kaggle Public Score: 1.42958
+
 Kaggle Private Score: 1.42854
 
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/178e9f3f-382a-4db9-8f5c-df480ee765b6)
@@ -204,9 +207,13 @@ Kaggle Private Score: 1.42854
     * Set initial default parameter and loop through to find the best parameter
     * Extremely slow runtime when optimizing the mode parameter
   * Multiclass Logarithmic Loss
-      Training’s multi_logloss: 0.62381 
+    
+      Training’s multi_logloss: 0.62381
+    
       Validation multi_logloss: 0.85574
+
 Kaggle Public Score: 0.87592
+
 Kaggle Private Score: 0.86544
 
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/d66fefda-ffb6-4ce8-9f5e-71cae34c4d80) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/0c37e29f-7dc9-4859-800a-cf1796063d3c)
@@ -221,9 +228,11 @@ Kaggle Private Score: 0.86544
   * Feature Importance
     * High Reliance on v63, v64, v54, v56
     * RandomizedSearchCV
-        * Test Multiclass Logarithmic Loss: 0.9295549658942347
+
+        Test Multiclass Logarithmic Loss: 0.9295549658942347
           
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/cd682ea8-031f-4587-945b-6dd206d96b79) ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/00f4a9de-a171-4916-8a9b-ecb7bc096a83) 
+
 ![image](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/0a8f5fa6-4858-4b1e-b346-d2e0702af63d)
 
 * XGBoost
