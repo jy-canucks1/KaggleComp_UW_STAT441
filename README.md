@@ -278,3 +278,10 @@ ___
   * Applying one hot encoding to selected string variable (after more deeper analysis) might be beneficial for future models.
 
 
+
+
+
+https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/e51715b9-1253-40c2-b13c-5dc541990a3c
+
+
+
