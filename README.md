@@ -273,6 +273,7 @@ ___
 Stacking
   * Decision to focus individual model like XGBoost, and Random Forest was aiming for depth of optimization over breadth of techniques.
   * It can be considered to enhance model performance.
+
 One Hot Encoding
   * Applying one hot encoding to selected string variable (after more deeper analysis) might be beneficial for future models.
 
