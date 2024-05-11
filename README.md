@@ -78,7 +78,7 @@ codebook.txt - (IMPORTANT) detailed descriptions of each column
 ## Result and Modeling process
 
 ### Kaggle result
-
+___
 ![K-090](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/9f9b2569-621f-4f03-8cb4-c917f11aa377)
 
 Link: [https://www.kaggle.com/competitions/w2024-kaggle-contest/leaderboard](https://www.kaggle.com/competitions/w2024-kaggle-contest/leaderboard)
