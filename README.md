@@ -75,6 +75,17 @@ sample_submission.csv - a sample submission file in the correct format
 codebook.txt - (IMPORTANT) detailed descriptions of each column
 
 
+## Result and Modeling process
+
+### Kaggle result
+
+![K-090](https://github.com/jy-canucks1/KaggleComp_UW_STAT441/assets/84373345/9f9b2569-621f-4f03-8cb4-c917f11aa377)
+
+Link: [https://www.kaggle.com/competitions/w2024-kaggle-contest/leaderboard](https://www.kaggle.com/competitions/w2024-kaggle-contest/leaderboard)
+
+Our team were ranked at 6th place out of 38 teams in this term.
+
+
 ### Software and Packages
 ___
 #### Data Preprocessing
@@ -267,6 +278,7 @@ ___
   v115: how much confidence in: church
 
   v54: how often attend religious services
+
 
 ### Possible Further Improvements
 ___
